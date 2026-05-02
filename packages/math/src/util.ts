@@ -35,4 +35,24 @@ function factorial(n: number): number {
   }
   return result;
 }
-export { add, subtract, multiply, divide, square, cube, power, factorial };
+function fibonacci(n: number): number {
+  if (n < 0) {
+    throw new Error("输入必须是非负整数");
+  }
+  if (n === 0) {
+    return 0;
+  }
+  if (n === 1) {
+    return 1;
+  }
+  let a = 0,
+    b = 1,
+    temp: number;
+  for (let i = 2; i <= n; i++) {
+    temp = a + b;
+    a = b;
+    b = temp;
+  }
+  return b;
+}
+export { add, subtract, multiply, divide, square, cube, power, factorial, fibonacci };

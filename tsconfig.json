@@ -66,10 +66,10 @@
   },
   // === 文件包含与排除 ===
   // 明确告知 TypeScript 编译器应处理的文件位置。
-  "include": ["src/**/*", "types/**/*"], // 包含源码目录和自定义类型声明目录
+  "include": ["packages/**/*", "types/**/*"], // 包含源码目录和自定义类型声明目录
   "exclude": [
     "node_modules",
-    "dist", // 构建输出目录
+    "packages/math/dist", // 构建输出目录
     "coverage", // 测试覆盖率报告目录
     "**/*.test.ts",
     "**/*.spec.ts"

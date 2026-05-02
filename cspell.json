@@ -4,7 +4,15 @@
   "language": "en",
   "import": ["@cspell/dict-lorem-ipsum/cspell-ext.json"],
   "words": ["cspell", "eslint", "webpack", "babel"],
-  "ignorePaths": ["node_modules", "dist", "*.json", "*.yml", ".lefthook", ".changeset"],
+  "ignorePaths": [
+    "node_modules",
+    "dist",
+    "*.json",
+    "*.yml",
+    ".lefthook",
+    ".changeset",
+    "pnpm-lock.yaml"
+  ],
   "ignoreRegExpList": ["https?://[^\\s]+", "Email:\\s*\\S+@\\S+\\.\\S+"],
   "dictionaries": ["custom-words"],
   "dictionaryDefinitions": [
