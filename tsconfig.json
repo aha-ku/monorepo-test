@@ -1,0 +1,77 @@
+{
+  // === 编译器选项：核心配置 ===
+  "compilerOptions": {
+    // ----- 目标与库 -----
+    // 目标JS语言版本。现代库推荐使用ES2020或更高。
+    "target": "esnext",
+    // 运行时库。如果库不在浏览器环境运行，可以不包含"DOM"。
+    // "lib": ["ES2020"],
+
+    // ----- 模块解析 -----
+    // 输出模块格式。tsup 会处理最终打包，这里设为 "ESNext" 即可。
+    "module": "esnext",
+    // 模块解析策略。与 tsup 配合最佳，也是现代打包工具的首选。
+    "moduleResolution": "bundler",
+
+    // ----- JSX 支持 -----
+    // 指定 JSX 代码的生成方式。"react-jsx" 是 React 17+ 的新 JSX 转换。
+    "jsx": "react-jsx",
+
+    // ----- 输出控制 (由 tsup 负责，TypeScript 不产出构建文件，只做类型检查)-----
+    // 关键: 设为 true，防止 tsc 命令直接产出 .js 文件，避免与 tsup 冲突。
+    "noEmit": true,
+    // 无需设置，因为 noEmit 为 true，tsc 不会产出任何文件。
+
+    // ----- 类型检查 (严格模式，保证库的类型安全)-----
+    // 开启所有严格类型检查选项。
+    "strict": true,
+    // // 当访问可能为空的值时报错。
+    // "strictNullChecks": true,
+    // // 函数没有显式返回时推断为 void，而非 any。
+    // "noImplicitReturns": true,
+    // // 禁止 this 隐式具有 any 类型。
+    // "noImplicitThis": true,
+    // // 在 switch 语句中检查遗漏的 break 语句。
+    // "noFallthroughCasesInSwitch": true,
+    // // 禁止对未初始化的变量进行引用。
+    // "noUnusedLocals": true,
+    // // 禁止定义了但未使用的参数。
+    // "noUnusedParameters": true,
+    // // 启用导入名大小写检查。
+    // "forceConsistentCasingInFileNames": true,
+
+    // ----- 声明文件生成 (由 tsup 负责)-----
+    // tsup 将通过 --dts 参数或配置动态生成类型声明，所以这里不设置。
+    // "declaration": true,
+    // 不在此处单独生成声明文件。
+    // "emitDeclarationOnly": true,
+
+    // ----- 其他优化 -----
+    // 跳过所有声明文件（.d.ts）的类型检查，可大幅提升编译速度。
+    "skipLibCheck": true,
+    // 确保每个文件都可以被安全地转译，而不依赖于其他导入。
+    "isolatedModules": true,
+    // 允许导入 .json 文件。
+    "resolveJsonModule": true,
+    // 允许从没有默认导出的模块中默认导入，与 allowSyntheticDefaultImports 同等作用。
+    "esModuleInterop": true,
+    // 忽略 TypeScript 6.0 对已弃用选项的警告，例如 baseUrl 在 DTS 构建时的退役提示。
+    "ignoreDeprecations": "6.0"
+
+    // ----- 路径别名 (可选，如果项目结构复杂)-----
+    // "rootDir": ".",
+    // "paths": {
+    //   ".": ["."]
+    // }
+  },
+  // === 文件包含与排除 ===
+  // 明确告知 TypeScript 编译器应处理的文件位置。
+  "include": ["src/**/*", "types/**/*"], // 包含源码目录和自定义类型声明目录
+  "exclude": [
+    "node_modules",
+    "dist", // 构建输出目录
+    "coverage", // 测试覆盖率报告目录
+    "**/*.test.ts",
+    "**/*.spec.ts"
+  ]
+}
