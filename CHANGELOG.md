@@ -1,5 +1,14 @@
 # @zjfcool/math-test
 
+## 0.1.2
+
+### Patch Changes
+
+- 45875d8: power func
+- 7f9d057: factorial function
+  doli
+- db13947: cube func
+
 ## 0.1.1
 
 ### Patch Changes
