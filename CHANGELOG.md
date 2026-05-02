@@ -1,5 +1,11 @@
 # @zjfcool/math-test
 
+## 0.1.1
+
+### Patch Changes
+
+- eb51da9: add srcript
+
 ## 0.1.0
 
 ### Minor Changes
