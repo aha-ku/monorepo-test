@@ -19,4 +19,7 @@ function square(a: number): number {
 function cube(a: number): number {
   return a * a * a;
 }
-export { add, subtract, multiply, divide, square, cube };
+function power(a: number, b: number): number {
+  return Math.pow(a, b);
+}
+export { add, subtract, multiply, divide, square, cube, power };
