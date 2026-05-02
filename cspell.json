@@ -11,7 +11,8 @@
     "*.yml",
     ".lefthook",
     ".changeset",
-    "pnpm-lock.yaml"
+    "pnpm-lock.yaml",
+    "CHANGELOG.md"
   ],
   "ignoreRegExpList": ["https?://[^\\s]+", "Email:\\s*\\S+@\\S+\\.\\S+"],
   "dictionaries": ["custom-words"],

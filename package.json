@@ -10,6 +10,8 @@
     "fmt": "oxfmt",
     "fmt:check": "oxfmt --check",
     "lint:cspell": "cspell  .",
+    "changeset": "pnpm changeset",
+    "version": "pnpm changeset version",
     "prepublishOnly": "npm run build"
   },
   "devDependencies": {
