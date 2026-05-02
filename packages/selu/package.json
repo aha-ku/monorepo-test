@@ -1,6 +1,6 @@
 {
-  "name": "@zjfcool/math-test",
-  "version": "0.1.2",
+  "name": "@zjfcool/selu",
+  "version": "0.0.1",
   "description": "a test",
   "keywords": [],
   "license": "MIT",
@@ -28,6 +28,7 @@
     "access": "public"
   },
   "scripts": {
-    "build": "tsup"
+    "build": "tsup",
+    "dev": "tsup --watch"
   }
 }
