@@ -1,8 +1,7 @@
 import { defineConfig } from "tsup";
 export default defineConfig({
   entry: ["src/index.ts"],
-  format: ["esm", "cjs", "iife"],
-  external: ["react", "react-dom"],
+  format: ["esm", "cjs"],
   dts: true,
   clean: true,
   minify: false,
