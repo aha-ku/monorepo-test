@@ -1,2 +1,3 @@
 oxlint
+srcript
 zjfcool

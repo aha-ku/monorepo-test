@@ -16,4 +16,7 @@ function divide(a: number, b: number): number {
 function square(a: number): number {
   return a * a;
 }
-export { add, subtract, multiply, divide, square };
+function cube(a: number): number {
+  return a * a * a;
+}
+export { add, subtract, multiply, divide, square, cube };
