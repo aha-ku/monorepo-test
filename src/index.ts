@@ -1,1 +1,10 @@
-export { add, subtract, multiply, divide, square, cube, power } from "./util";
+export {
+  add,
+  subtract,
+  multiply,
+  divide,
+  square,
+  cube,
+  power,
+  factorial,
+} from "./util";

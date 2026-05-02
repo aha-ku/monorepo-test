@@ -22,4 +22,17 @@ function cube(a: number): number {
 function power(a: number, b: number): number {
   return Math.pow(a, b);
 }
-export { add, subtract, multiply, divide, square, cube, power };
+function factorial(n: number): number {
+  if (n < 0) {
+    throw new Error("输入必须是非负整数");
+  }
+  if (n === 0 || n === 1) {
+    return 1;
+  }
+  let result = 1;
+  for (let i = 2; i <= n; i++) {
+    result *= i;
+  }
+  return result;
+}
+export { add, subtract, multiply, divide, square, cube, power, factorial };
