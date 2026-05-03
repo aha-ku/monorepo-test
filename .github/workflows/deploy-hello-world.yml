@@ -1,0 +1,44 @@
+name: Deploy hello-world to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "packages/hello-world/**"
+      - ".github/workflows/deploy-hello-world.yml"
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: "pnpm"
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Build hello-world
+        run: pnpm build:hello-world
+
+      - name: Copy to docs folder (GitHub Pages source)
+        run: |
+          rm -rf docs
+          cp -r examples/hello-world/dist docs
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./docs
+          publish_branch: gh-pages # 将构建内容推送到 gh-pages 分支
