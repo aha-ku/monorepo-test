@@ -4,7 +4,7 @@ on:
   push:
     branches: [main]
     paths:
-      - "packages/hello-world/**"
+      - "examples/hello-world/**"
       - ".github/workflows/deploy-hello-world.yml"
 
 jobs:
