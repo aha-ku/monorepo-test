@@ -3,4 +3,7 @@ const activation = (x: number): number => {
   const scale = 1.0507009873554805;
   return x > 0 ? scale * x : scale * alpha * (Math.exp(x) - 1);
 };
-export { activation };
+function sigmoid(x: number): number {
+  return 1 / (1 + Math.exp(-x));
+}
+export { activation, sigmoid };

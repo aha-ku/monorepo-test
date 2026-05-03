@@ -10,9 +10,8 @@
     "fmt": "oxfmt",
     "fmt:check": "oxfmt --check",
     "lint:cspell": "cspell  .",
-    "changeset": "pnpm changeset",
-    "version": "pnpm changeset version",
-    "prepublishOnly": "npm run build"
+    "change": "pnpm changeset",
+    "version": "pnpm changeset version"
   },
   "devDependencies": {
     "@changesets/cli": "^2.31.0",
