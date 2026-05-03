@@ -27,12 +27,13 @@ jobs:
         run: pnpm install --frozen-lockfile
 
       - name: Build hello-world
-        run: pnpm build:hello-world
+        run: pnpm run build:hello-world
 
       - name: Copy to docs folder (GitHub Pages source)
         run: |
           rm -rf docs
-          cp -r examples/hello-world/dist docs
+          mkdir -p docs
+          cp -r examples/hello-world/dist/* docs/
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
