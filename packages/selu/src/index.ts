@@ -6,4 +6,8 @@ const activation = (x: number): number => {
 function sigmoid(x: number): number {
   return 1 / (1 + Math.exp(-x));
 }
-export { activation, sigmoid };
+function derivative(x: number): number {
+  const s = sigmoid(x);
+  return s * (1 - s);
+}
+export { activation, sigmoid, derivative };
