@@ -1,0 +1,12 @@
+{
+  "mode": "pre",
+  "tag": "rc",
+  "initialVersions": {
+    "hello-world": "0.0.0",
+    "@zjfcool/math-test": "0.1.3",
+    "@zjfcool/selu": "1.0.0"
+  },
+  "changesets": [
+    "yummy-steaks-argue"
+  ]
+}

@@ -1,5 +1,11 @@
 # @zjfcool/selu
 
+## 2.0.0-rc.0
+
+### Major Changes
+
+- rc 2.0.0
+
 ## 1.0.0
 
 ### Major Changes
