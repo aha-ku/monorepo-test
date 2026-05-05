@@ -1,5 +1,17 @@
 # @zjfcool/selu
 
+## 2.0.0
+
+### Major Changes
+
+- d60b701: rc 2.0.0
+
+### Patch Changes
+
+- 1c97943: add a func
+- f15f2b7: add changeset
+- 43a25b1: readme
+
 ## 2.0.0-rc.3
 
 ### Patch Changes
