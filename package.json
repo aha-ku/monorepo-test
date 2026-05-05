@@ -13,7 +13,8 @@
     "fmt:check": "oxfmt --check",
     "lint:cspell": "cspell  .",
     "change": "pnpm changeset",
-    "change:v": "pnpm changeset version"
+    "change:v": "pnpm changeset version",
+    "ci:publish": "pnpm publish -r "
   },
   "devDependencies": {
     "@changesets/cli": "^2.31.0",
