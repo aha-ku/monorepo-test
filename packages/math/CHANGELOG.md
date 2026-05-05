@@ -1,5 +1,11 @@
 # @zjfcool/math-test
 
+## 0.1.4-rc.1
+
+### Patch Changes
+
+- f15f2b7: add changeset
+
 ## 0.1.4-rc.0
 
 ### Patch Changes
