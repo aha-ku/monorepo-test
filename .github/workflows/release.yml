@@ -6,6 +6,7 @@ on:
     paths:
       - "packages/*/**"
       - ".github/workflows/release.yml"
+  workflow_dispatch:
 
 concurrency: ${{ github.workflow }}-${{ github.ref }}
 
