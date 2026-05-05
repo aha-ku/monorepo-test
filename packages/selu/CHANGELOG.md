@@ -1,5 +1,11 @@
 # @zjfcool/selu
 
+## 2.0.0-rc.3
+
+### Patch Changes
+
+- f15f2b7: add changeset
+
 ## 2.0.0-rc.2
 
 ### Patch Changes
